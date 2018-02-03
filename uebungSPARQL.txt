@@ -1,0 +1,39 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://www.example.de/> .
+
+
+
+:film           a               rdfs:Class .
+:comedy         rdfs:subClassOf :film .
+:schauspieler   a               rdfs:Class .
+:rolle          a               rdfs:Class .
+
+
+:hatBesetzung   a               rdf:Property ;
+                rdfs:domain     :film ;
+                rdfs:range      :rolle .
+                
+:gespieltVon    a               rdf:Property ;
+                rdfs:range      :schauspieler ;
+                rdfs:domain     :rolle .
+
+
+
+
+:splash_film        a               :comedy ;
+                    :hatBesetzung   [   a               :rolle; 
+                                        :gespieltVon    :johnCandy    ] ;
+                    :hatBesetzung   [   a               :rolle; 
+                                        :gespieltVon    :tomHanks     ] .
+
+
+:forrestGumb_film   a               :film ;
+                    :hatBesetzung   [   a                   :rolle ;
+                                        :dargestellteFigur  :forrestGumb ;
+                                        :gespieltVon        :tomHanks ] .
+
+
+:johncandy          a               :schauspieler .
+:tomHanks           a               :schauspieler .
