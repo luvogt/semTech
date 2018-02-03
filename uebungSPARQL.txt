@@ -37,3 +37,4 @@
 
 :johnCandy          a               :schauspieler .
 :tomHanks           a               :schauspieler .
+:sigourneyWeaver    a               :schauspieler .
