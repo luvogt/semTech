@@ -35,6 +35,7 @@
                                         :gespieltVon        :tomHanks ] .
 
 
-:johnCandy          a               :schauspieler .
+:johnCandy          a               :schauspieler ;
+                    a               :male .
 :tomHanks           a               :schauspieler .
 :sigourneyWeaver    a               :schauspieler .
