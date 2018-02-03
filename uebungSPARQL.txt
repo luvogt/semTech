@@ -35,5 +35,5 @@
                                         :gespieltVon        :tomHanks ] .
 
 
-:johncandy          a               :schauspieler .
+:johnCandy          a               :schauspieler .
 :tomHanks           a               :schauspieler .
